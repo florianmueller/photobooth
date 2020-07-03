@@ -138,6 +138,9 @@ imagedestroy($imageResource);
 // insert into database
 appendImageToDB($file);
 
+// Change permissions
+chmod($filename_photo,0666)
+
 echo json_encode([
     'file' => $file,
 ]);
